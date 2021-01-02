@@ -64,6 +64,7 @@ class inputbox(object):
             pygame.K_SLASH:"/",
             pygame.K_SPACE:" ",
             pygame.K_QUOTE:"'",
+            pygame.K_MINUS:"-",
             pygame.K_BACKSPACE:"BACKSPACE",
             pygame.K_LEFT:"LEFT",
             pygame.K_RIGHT:"RIGHT",
@@ -161,6 +162,8 @@ class inputbox(object):
                             newtext=":"
                         elif (newtext=="'"):
                             newtext='"'
+                        elif (newtext=="-"):
+                            newtest="_"
                         else:
                             newtext=newtext.upper()
                     if (len(self.text)<self.max_string_len-1):
